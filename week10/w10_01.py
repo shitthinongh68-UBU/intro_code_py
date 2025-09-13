@@ -1,6 +1,7 @@
 count = int(input())
 
-print("\\", end='')
 for i in range(count):
-    print('Q', end='')
-print("/")
+    i_fp = i + 1
+    print('\\', end='')
+    print('Q'*i_fp, end='')
+    print('/')
