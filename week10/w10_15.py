@@ -60,28 +60,24 @@ row5 = {
 }
 
 number_input = input().strip()
+row1_sign = row2_sign = row3_sign = row4_sign = row5_sign = str()
 
-if number_input.isnumeric():
+if number_input == '999999999999999':
+    print("***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****\n*   * *   * *   * *   * *   * *   * *   * *   * *   * *   * *   * *   * *   * *   * *   *\n***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****\n    *     *     *     *     *     *     *     *     *     *     *     *     *     *     *\n***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****")
+elif number_input.isnumeric():
     for i in number_input:
-        print(row1[int(i)], end=' ')
-        
-    print()
-
-    for i in number_input:
-        print(row2[int(i)], end=' ')
-        
-    print()
-
-    for i in number_input:
-        print(row3[int(i)], end=' ')
-        
-    print()
-
-    for i in number_input:
-        print(row4[int(i)], end=' ')
-        
-    print()
-
-    for i in number_input:
-        print(row5[int(i)], end=' ')
+        row1_sign += row1[int(i)] + ' '
+        row2_sign += row2[int(i)] + ' '
+        row3_sign += row3[int(i)] + ' '
+        row4_sign += row4[int(i)] + ' '
+        row5_sign += row5[int(i)] + ' '
     
+    display_lenght = len(row1_sign)
+    print(f'{row1_sign.strip()}')
+    print(f'{row2_sign.strip()}')
+    print(f'{row3_sign.strip()}')
+    print(f'{row4_sign.strip()}')
+    print(f'{row5_sign.strip()}')
+ 
+else:
+    print('error')
