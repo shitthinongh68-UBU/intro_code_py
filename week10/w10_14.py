@@ -3,7 +3,9 @@ pair_sum10 = False
 
 for i in num_list:
     for j in range(len(num_list)):
-        if int(i) + int(num_list[j]) == 10:
+        if i == num_list[j]:
+            continue
+        elif int(i) + int(num_list[j]) == 10:
             pair_sum10 = True
 
 
