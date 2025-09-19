@@ -37,4 +37,3 @@ def SortedCSV(file):
 
     comp_list_sorted = sorted(comp_list, key=lambda x: float(x[-1]))
     showvalue_inlist(comp_list_sorted)
-
